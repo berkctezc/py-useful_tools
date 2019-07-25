@@ -1,8 +1,9 @@
-import pyperclip  # for sending output to clipboard (install with pip)
+import pyperclip as pc # for sending output to clipboard (install with pip)
 import importlib
 
 # Phone Number Formatter for Turkish Phone Numbers
-## country = "90"
+## country = "+90"
+## to do (add more countries)
 
 
 def phoneFormatter(no):
@@ -27,7 +28,7 @@ def phoneFormatter(no):
     else:
         formattedNo = "+90"+noReplaced
 
-    pyperclip.copy(formattedNo)
+    pc.copy(formattedNo)
     print("Corrected Phone Number Copied To Your Clipboard")
     return formattedNo
 
