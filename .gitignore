@@ -1,0 +1,6 @@
+log.txt
+*.exe
+*.swp
+/release
+/documentation/*.pdf
+/documentation/*.docx
