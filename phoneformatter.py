@@ -36,7 +36,7 @@ def phoneFormatter(no):
 
 
 def nameFormatter(name):
-    # to do (regex)
+    # to do (gonna add regex)
     return name.title()
 
 
