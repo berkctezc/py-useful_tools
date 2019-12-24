@@ -8,8 +8,7 @@ formats what you paste to the command line and automatically copies the result t
 * for now it just works for turkish phone numbers. gonna add support for every region
 * gonna program a frontend gui with qt
 * regex instead of manual replacing
-
-  builds for linux/windows
+* builds for linux/windows
 
 
 
