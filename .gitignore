@@ -4,3 +4,4 @@
 #/release
 #/documentation/*.pdf
 #/documentation/*.docx
+qtGui.py
