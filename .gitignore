@@ -1,7 +1,4 @@
-#changelog.txt
-#*.exe
-#*.swp
-#/release
-#/documentation/*.pdf
-#/documentation/*.docx
-qtGui.py
+*.exe
+*.swp
+/release
+
