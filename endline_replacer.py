@@ -1,21 +1,26 @@
-import pyperclip as pc
-import importlib
+import pyperclip as pc #pip install pyperclip
 
 
 def paragraphFormatter(string):
-    stringReplaced = string.replace(chr(10), " ").replace(chr(13), " ").replace('\\n', ' ')
+    stringReplaced = string.replace(chr(10), " ").replace(chr(13), " ")
+    # ASCII(10)-> Line Feed (Linux,macOS) / ASCII(13)-> Carriage Return
 
     pc.copy(stringReplaced)
-    print("Corrected String copied to clipboard")
+    print("Got rid of end lines | String copied to clipboard (to reset the clipboard press - )")
     return stringReplaced
 
-def main():
-    
-    allparagraphs=" "
 
-    while allparagraphs!="":
-        allparagraphs = allparagraphs+" "+input("paragraph: ")
-        ret=paragraphFormatter(allparagraphs)
-        print(ret)
+def main():
+
+    allparagraphs=""
+
+    while True: 
+        parag = input("paragraph: ")
+        allparagraphs = allparagraphs+" "+parag
+        ret = paragraphFormatter(allparagraphs)
+        #print(ret)
+        if parag == "-":
+            allparagraphs = ""
+
 
 main()
