@@ -1,5 +1,4 @@
 import pyperclip as pc # for sending output to clipboard (install with pip)
-import importlib
 
 # Phone Number Formatter for Turkish Phone Numbers
 ## country = "+90"
