@@ -18,10 +18,10 @@ def main():
         parag = input("paragraph: ")
 
         if parag == "-":
-            parag.replace("-","")
+            parag=""
             print("Clipboard reset")
             allparagraphs = ""
-            
+
         allparagraphs = allparagraphs+" "+parag
         ret = paragraphFormatter(allparagraphs)
         #print(ret)
