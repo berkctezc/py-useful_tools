@@ -46,7 +46,7 @@ def distance(lat1, lon1, lat2, lon2, unit):
 def main():
     counter = 0
 
-    print("Pass 0 to return to origin")
+    print(bcolors.HEADER+"Pass 0 to return to origin"+bcolors.ENDC)
 
     unit = 'M'  # unit = str(input('* Enter unit of measurement: ')).upper()
     originLat = float(input('* Origin Latitude: '))
