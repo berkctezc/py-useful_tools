@@ -3,6 +3,24 @@ import math
 import sys
 
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+def printSplitted(string):
+    print(bcolors.OKGREEN+"==========="+bcolors.ENDC)
+    print(bcolors.OKCYAN+string+bcolors.ENDC)
+    print(bcolors.OKGREEN+"==========="+bcolors.ENDC)
+
+
 def distance(lat1, lon1, lat2, lon2, unit):
     if (lat1 == lat2) and (lon1 == lon2):
         return 0
@@ -28,8 +46,9 @@ def distance(lat1, lon1, lat2, lon2, unit):
 def main():
     counter = 0
 
-    unit = 'M'  # unit = str(input('* Enter unit of measurement: ')).upper()
+    print("Pass 0 to return to origin")
 
+    unit = 'M'  # unit = str(input('* Enter unit of measurement: ')).upper()
     originLat = float(input('* Origin Latitude: '))
     if(originLat == 0):
         print("Terminated script")
@@ -50,15 +69,14 @@ def main():
         calculatedDistance = math.floor(distance(originLat, originLon,
                                                  destinationLat, destinationLon, unit))
         pc.copy(str(calculatedDistance))
-        print("===========\n"+str(calculatedDistance) +
-              " " + unit+"\n===========")
-        print("===========\nCOPIED TO CLIPBOARD\n===========")
+        printSplitted(str(calculatedDistance) + " " + unit)
+        printSplitted("COPIED TO CLIPBOARD")
 
         counter += 1
-        print("===========\nYou have calculated " + str(counter) +
-              " distance(s) this session.\n===========")
+        printSplitted(str(counter) + " distance(s) calculated with origin:" +
+                      str(originLat)+"," + str(originLon))
 
 
 while True:
-    print("Calculator started / Pass 0 to return to origin and again to exit the script.")
+    print(bcolors.HEADER+"Calculator started / Pass 0 to exit the script."+bcolors.ENDC)
     main()
