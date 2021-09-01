@@ -16,9 +16,9 @@ class bcolors:
 
 
 def printSplitted(string):
-    print(bcolors.OKGREEN+"==========="+bcolors.ENDC)
+    print(bcolors.OKGREEN+len(string)*'='+bcolors.ENDC)
     print(bcolors.OKCYAN+string+bcolors.ENDC)
-    print(bcolors.OKGREEN+"==========="+bcolors.ENDC)
+    print(bcolors.OKGREEN+len(string)*'='+bcolors.ENDC)
 
 
 def distance(lat1, lon1, lat2, lon2, unit):
