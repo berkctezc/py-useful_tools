@@ -12,4 +12,4 @@ formats what you paste to the command line and automatically copies the result t
 
 
 
-at first this repo is created to demonstrate some git commands on my medium blog but i decided to collect some useful scripts in this repo and i plan to add a gui and builds for learning purposes for later
+in the beginning this repo was created to demonstrate some git commands on my medium blog but i decided to collect some useful scripts in this repo and i plan to add a gui and builds for learning purposes for later
